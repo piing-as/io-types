@@ -18,6 +18,7 @@ const NullableNumber = Nullable(io.number)
 NullableNumber.decode(null) // right null
 NullableNumber.decode(1) // right 1
 
+
 YesNoBool.decode("yes") // right true
 YesNoBool.decode("no") // right false
 
