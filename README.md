@@ -6,6 +6,13 @@ A sellection of essential io-ts types for decoding io like url queries and such.
 
 ```typescript
 
+import * as io from "io-ts"
+
+import {ArrayFromJSONString} from "@piing/io-types/lib/ArrayFromJSONString"
+import {NullableNumber} from "@piing/io-types/lib/NullableNumber"
+import {YesNoBool} from "@piing/io-types/lib/YesNoBool"
+
+
 const JSONNumberArray = ArrayFromJSONString<number>(io.number);
 const JSONStringArray = ArrayFromJSONString<string>(io.string);
 
@@ -21,7 +28,6 @@ NullableNumber.decode(1) // right 1
 
 YesNoBool.decode("yes") // right true
 YesNoBool.decode("no") // right false
-
 
 ```
 
