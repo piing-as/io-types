@@ -2,6 +2,11 @@
 
 A sellection of essential io-ts types for decoding io like url queries and such.
 
+## Install
+```bash
+npm i @piing/io-types
+```
+
 ### Examples
 
 ```typescript
