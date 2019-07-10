@@ -6,8 +6,8 @@ import { ArrayFromJSONString } from "./ArrayFromJSONString";
 
 describe("types/ArrayFromJSONString", () => {
 
-	const JSONNumberArray = ArrayFromJSONString<number>(io.number);
-	const JSONStringArray = ArrayFromJSONString<string>(io.string);
+	const JSONNumberArray = ArrayFromJSONString(io.number);
+	const JSONStringArray = ArrayFromJSONString(io.string);
 
 	describe("decode", () => {
 		

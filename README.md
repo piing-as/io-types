@@ -18,8 +18,8 @@ import { Nullable } from "@piing/io-types/lib/Nullable"
 import { YesNoBool } from "@piing/io-types/lib/YesNoBool"
 
 
-const JSONNumberArray = ArrayFromJSONString<number>(io.number);
-const JSONStringArray = ArrayFromJSONString<string>(io.string);
+const JSONNumberArray = ArrayFromJSONString(io.number);
+const JSONStringArray = ArrayFromJSONString(io.string);
 
 JSONNumberArray.decode("[1,2,3]") // right [1,2,3]
 JSONStringArray.decode(`["foo", "bar"]`) // right ["foo", "bar"]
