@@ -13,9 +13,9 @@ npm i @piing/io-types
 
 import * as io from "io-ts"
 
-import {ArrayFromJSONString} from "@piing/io-types/lib/ArrayFromJSONString"
-import {NullableNumber} from "@piing/io-types/lib/NullableNumber"
-import {YesNoBool} from "@piing/io-types/lib/YesNoBool"
+import { ArrayFromJSONString } from "@piing/io-types/lib/ArrayFromJSONString"
+import { Nullable } from "@piing/io-types/lib/Nullable"
+import { YesNoBool } from "@piing/io-types/lib/YesNoBool"
 
 
 const JSONNumberArray = ArrayFromJSONString<number>(io.number);
