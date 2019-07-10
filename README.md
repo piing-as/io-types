@@ -9,8 +9,8 @@ A sellection of essential io-ts types for decoding io like url queries and such.
 const JSONNumberArray = ArrayFromJSONString<number>(io.number);
 const JSONStringArray = ArrayFromJSONString<string>(io.string);
 
-const decodednumbers = JSONNumberArray.decode("[1,2,3]") // right [1,2,3]
-const decodedStrings = JSONStringArray.decode(`["foo", "bar"]`) // right ["foo", "bar"]
+JSONNumberArray.decode("[1,2,3]") // right [1,2,3]
+JSONStringArray.decode(`["foo", "bar"]`) // right ["foo", "bar"]
 
 
 const NullableNumber = Nullable(io.number)
