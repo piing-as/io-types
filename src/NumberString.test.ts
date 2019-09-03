@@ -2,9 +2,9 @@ import * as mocha from "mocha";
 import * as assert from "assert";
 import { isRight, isLeft } from "fp-ts/lib/Either";
 
-import { NumberFromString } from "./NumberFromString";
+import { NumberString } from "./NumberString";
 
-describe("types/NumberFromString", () => {
+describe("types/NumberString", () => {
 
   describe("decode", () => {
 
@@ -14,7 +14,7 @@ describe("types/NumberFromString", () => {
       ]
 
       for(const value of values) {
-        const decoded = NumberFromString.decode(value);
+        const decoded = NumberString.decode(value);
         if(isRight(decoded)) {
           assert.equal(decoded.right, value)
         } else {
@@ -29,7 +29,7 @@ describe("types/NumberFromString", () => {
       ]
 
       for(const value of values) {
-        const decoded = NumberFromString.decode(value);
+        const decoded = NumberString.decode(value);
         if(isRight(decoded)) {
           assert.equal(decoded.right, value)
         } else {
@@ -43,7 +43,7 @@ describe("types/NumberFromString", () => {
         "", "abc", "a1", "1a", false, true, undefined, null
       ]
       for(const value of values) {
-        const decoded = NumberFromString.decode(value);
+        const decoded = NumberString.decode(value);
         if(!isLeft(decoded))
           assert.fail(`could not decode ${decoded}`)
       }

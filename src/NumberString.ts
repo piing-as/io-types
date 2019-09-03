@@ -1,8 +1,8 @@
 import * as io from "io-ts";
 import { isNull } from "util";
 
-export const NumberFromString = new io.Type<number, string, unknown>(
-  'NumberFromString',
+export const NumberString = new io.Type<number, string, unknown>(
+  'NumberString',
   io.number.is,
   (s, c) => {
     if(typeof s === "string" && s === "")

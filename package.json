@@ -1,7 +1,7 @@
 {
   "name": "@piing/io-types",
   "private": false,
-  "version": "0.0.22",
+  "version": "1.0.0",
   "description": "Essential io types using io-ts",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
@@ -15,9 +15,10 @@
     "build": "tsc -d && sleep 2",
     "dev": "tsc -d --watch",
     "clean": "rm -rf ./lib",
-    "prepublish": "npm run test && npm run build",
+    "prepublish": "npm run test && npm run build && npm run docgen",
     "test": "mocha --require ts-node/register ./src/**/*.test.ts",
-    "prebuild": "npm audit && npm run clean && npm run test"
+    "prebuild": "npm audit && npm run clean && npm run test",
+    "docgen": "typedoc --out ./docs ./src"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "assert": "^2.0.0",
     "mocha": "^6.1.4",
     "ts-node": "^8.3.0",
+    "typedoc": "^0.15.0",
     "typescript": "^3.5.3"
   }
 }

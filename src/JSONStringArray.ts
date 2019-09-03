@@ -2,8 +2,8 @@ import { string, Type, Array, failure, success } from "io-ts";
 import { PathReporter } from "io-ts/lib/PathReporter";
 import { either, isLeft } from "fp-ts/lib/Either";
 
-export const ArrayFromJSONString = <A> (fa: Type<A, unknown>) => new Type<A[], unknown, unknown>(
-	"ArrayFromJSONString",
+export const JSONStringArray = <A> (fa: Type<A, unknown>) => new Type<A[], unknown, unknown>(
+	"JSONStringArray",
 	(u): u is A[] => Array.is(u),
 	(u, c) =>
 		either.chain(string.validate(u, c), s => {
