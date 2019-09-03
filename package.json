@@ -18,7 +18,7 @@
     "prepublish": "npm run test && npm run build && npm run docgen",
     "test": "mocha --require ts-node/register ./src/**/*.test.ts",
     "prebuild": "npm audit && npm run clean && npm run test",
-    "docgen": "typedoc --out ./docs ./src"
+    "docgen": "typedoc --out ./docs ./src && touch ./docs/.nojekyll"
   },
   "repository": {
     "type": "git",
