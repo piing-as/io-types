@@ -1,7 +1,7 @@
 {
   "name": "@piing/io-types",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Essential io types using io-ts",
   "main": "./lib/index.js",
   "typings": "./lib/index.d.ts",
@@ -17,7 +17,7 @@
     "clean": "rm -rf ./lib",
     "prepublish": "npm run test && npm run build && npm run docgen",
     "test": "mocha --require ts-node/register ./src/**/*.test.ts",
-    "prebuild": "npm audit && npm run clean && npm run test",
+    "prebuild": "npm run clean && npm run test",
     "docgen": "rm -rf ./docs && typedoc --out ./docs ./src && touch ./docs/.nojekyll"
   },
   "repository": {
@@ -27,8 +27,8 @@
   "author": "Jørn Andre Tangen @gorillatron",
   "license": "mit",
   "dependencies": {
-    "fp-ts": "^2.0.1",
-    "io-ts": "^2.0.0"
+    "fp-ts": "^2.1.0",
+    "io-ts": "^2.0.1"
   },
   "devDependencies": {
     "@types/assert": "^1.4.2",
